@@ -835,10 +835,10 @@ class InstallationProcess(multiprocessing.Process):
         default_dir = os.path.join(self.dest_dir, "etc/default")
         default_grub = os.path.join(default_dir, "grub")
         plymouth_bin = os.path.join(self.dest_dir, "usr/bin/plymouth")
+        use_splash = ''
         if os.path.exists(plymouth_bin):
             use_splash = 'splash'
-        else
-            use_splash = ''
+            
         if "swap" in self.mount_devices:
             swap_partition = self.mount_devices["swap"]
             swap_uuid = fs.get_info(swap_partition)['UUID']
