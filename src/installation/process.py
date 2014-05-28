@@ -817,6 +817,10 @@ class InstallationProcess(multiprocessing.Process):
         """ Installs boot loader """
 
         self.modify_grub_default()
+        self.prepare_grub_d()
+
+        # Freeze and unfreeze xfs filesystems to enable grub(2) installation on xfs filesystems
+        self.freeze_xfs()
 
         bootloader = self.settings.get('bootloader_type')
         if bootloader == "GRUB2":
@@ -893,11 +897,8 @@ class InstallationProcess(multiprocessing.Process):
 
         logging.debug('/etc/default/grub configuration completed successfully.')
 
-    def install_bootloader_grub2_bios(self):
-        """ Install boot loader in a BIOS system """
-        grub_location = self.settings.get('bootloader_location')
-        self.queue_event('info', _("Installing GRUB(2) BIOS boot loader in %s") % grub_location)
-
+    def prepare_grub_d(self):
+        # Prepare etc/grub.d folder
         grub_d_dir = os.path.join(self.dest_dir, "etc/grub.d")
 
         if not os.path.exists(grub_d_dir):
@@ -906,10 +907,15 @@ class InstallationProcess(multiprocessing.Process):
         try:
             shutil.copy2("/etc/grub.d/10_linux", grub_d_dir)
         except FileNotFoundError:
-            self.queue_event('warning', _("ERROR installing GRUB(2) BIOS."))
+            self.queue_event('warning', _("ERROR on preparing 'etc/grub.d'-folder."))
             return
         except FileExistsError:
             pass
+
+    def install_bootloader_grub2_bios(self):
+        """ Install boot loader in a BIOS system """
+        grub_location = self.settings.get('bootloader_location')
+        self.queue_event('info', _("Installing GRUB(2) BIOS boot loader in %s") % grub_location)
 
         self.chroot_mount_special_dirs()
 
@@ -926,16 +932,22 @@ class InstallationProcess(multiprocessing.Process):
         self.install_bootloader_grub2_locales()
 
         locale = self.settings.get("locale")
-        self.chroot(['sh', '-c', 'LANG=%s grub-mkconfig -o /boot/grub/grub.cfg' % locale])
+        try:
+            self.chroot(['sh', '-c', 'LANG=%s grub-mkconfig -o /boot/grub/grub.cfg' % locale], 45)
+        except subprocess.TimeoutExpired:
+            logging.error(_("grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can continue."))
+            os.system("killall grub-mount")
+            os.system("killall os-prober")
 
         self.chroot_umount_special_dirs()
 
-        core_path = os.path.join(self.dest_dir, "boot/grub/i386-pc/core.img")
-        if os.path.exists(core_path):
+        cfg = os.path.join(self.dest_dir, "boot/grub/grub.cfg")
+        if "Manjaro" in open(cfg).read():
             self.queue_event('info', _("GRUB(2) BIOS has been successfully installed."))
             self.settings.set('bootloader_ok', True)
         else:
             self.queue_event('warning', _("ERROR installing GRUB(2) BIOS."))
+            self.settings.set('bootloader_ok', False)
 
     def install_bootloader_grub2_efi(self, arch):
         """ Install boot loader in a UEFI system """
@@ -947,19 +959,6 @@ class InstallationProcess(multiprocessing.Process):
             uefi_arch = "i386"
             spec_uefi_arch = "ia32"
             spec_uefi_arch_caps = "IA32"
-
-        grub_d_dir = os.path.join(self.dest_dir, "etc/grub.d")
-
-        if not os.path.exists(grub_d_dir):
-            os.makedirs(grub_d_dir)
-
-        try:
-            shutil.copy2("/etc/grub.d/10_linux", grub_d_dir)
-        except FileNotFoundError:
-            self.queue_event('warning', _("ERROR installing GRUB(2) UEFI."))
-            return
-        except FileExistsError:
-            pass
 
         # grub2-efi installation isn't done in a chroot because when efibootmgr
         # runs it doesn't detect a uefi environment and fails to add a new uefi
@@ -1021,11 +1020,22 @@ class InstallationProcess(multiprocessing.Process):
         self.chroot_mount_special_dirs()
 
         locale = self.settings.get("locale")
-        self.chroot(['sh', '-c', 'LANG=%s grub-mkconfig -o /boot/grub/grub.cfg' % locale])
+        try:
+            self.chroot(['sh', '-c', 'LANG=%s grub-mkconfig -o /boot/grub/grub.cfg' % locale], 45)
+        except subprocess.TimeoutExpired:
+            logging.error(_("grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can continue."))
+            os.system("killall grub-mount")
+            os.system("killall os-prober")
 
         self.chroot_umount_special_dirs()
 
-        self.settings.set('bootloader_ok', True)
+        cfg = os.path.join(self.dest_dir, "boot/grub/grub.cfg")
+        if "Manjaro" in open(cfg).read():
+            self.queue_event('info', _("GRUB(2) UEFI has been successfully installed."))
+            self.settings.set('bootloader_ok', True)
+        else:
+            self.queue_event('warning', _("ERROR installing GRUB(2) UEFI."))
+            self.settings.set('bootloader_ok', False)
 
     def install_bootloader_grub2_locales(self):
         """ Install Grub2 locales """
@@ -1043,6 +1053,37 @@ class InstallationProcess(multiprocessing.Process):
         except FileExistsError:
             # Ignore if already exists
             pass
+
+    def freeze_xfs(self):
+        """ Freeze and unfreeze xfs, as hack for grub(2) installing """
+        if not os.path.exists("/usr/bin/xfs_freeze"):
+            return
+
+        xfs_boot = False
+        xfs_root = False
+
+        try:
+            subprocess.check_call(["sync"])
+            with open("/proc/mounts", "r") as mounts_file:
+                mounts = mounts_file.readlines()
+            # We leave a blank space in the end as we want to search exactly for this mount points
+            boot_mount_point = self.dest_dir + "/boot "
+            root_mount_point = self.dest_dir + " "
+            for line in mounts:
+                if " xfs " in line:
+                    if boot_mount_point in line:
+                        xfs_boot = True
+                    elif root_mount_point in line:
+                        xfs_root = True
+            if xfs_boot:
+                boot_mount_point = boot_mount_point.rstrip()
+                subprocess.check_call(["/usr/bin/xfs_freeze", "-f", boot_mount_point])
+                subprocess.check_call(["/usr/bin/xfs_freeze", "-u", boot_mount_point])
+            if xfs_root:
+                subprocess.check_call(["/usr/bin/xfs_freeze", "-f", self.dest_dir])
+                subprocess.check_call(["/usr/bin/xfs_freeze", "-u", self.dest_dir])
+        except subprocess.CalledProcessError as err:
+            logging.warning(_("Can't freeze/unfreeze xfs system"))
 
     def enable_services(self, services):
         """ Enables all services that are in the list 'services' """
