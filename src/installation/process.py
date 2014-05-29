@@ -1508,12 +1508,12 @@ class InstallationProcess(multiprocessing.Process):
 
         # Install xf86-video driver
         if os.path.exists("/opt/livecd/pacman-gfx.conf"):
-            self.queue_event('info', _("Configure hardware ..."))
+            self.queue_event('info', _("Installing drivers ..."))
             self.queue_event('pulse')
             mhwd_script_path = os.path.join(self.settings.get("thus"), "scripts", MHWD_SCRIPT)
             try:
                 subprocess.check_call(["/usr/bin/bash", mhwd_script_path])
-                self.queue_event('debug', "Configure hardware - done")
+                self.queue_event('debug', "Finished installing drivers.")
             except subprocess.FileNotFoundError as e:
                 txt = _("Can't execute the MHWD script")
                 logging.error(txt)
