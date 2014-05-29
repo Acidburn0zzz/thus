@@ -45,7 +45,7 @@ from configobj import ConfigObj
 
 conf_file = '/etc/thus.conf'
 configuration = ConfigObj(conf_file)
-MHWS_SCRIPT = 'mhwd.sh'
+MHWD_SCRIPT = 'mhwd.sh'
 
 ## BEGIN: RSYNC-based file copy support
 #CMD = 'unsquashfs -f -i -da 32 -fr 32 -d %(dest)s %(source)s'
@@ -1508,12 +1508,12 @@ class InstallationProcess(multiprocessing.Process):
 
         # Install xf86-video driver
         if os.path.exists("/opt/livecd/pacman-gfx.conf"):
-            self.queue_event('info', _("Set up graphics card ..."))
+            self.queue_event('info', _("Configure hardware ..."))
             self.queue_event('pulse')
-            mhwd_script_path = os.path.join(self.settings.get("thus"), "scripts", MHWS_SCRIPT)
+            mhwd_script_path = os.path.join(self.settings.get("thus"), "scripts", MHWD_SCRIPT)
             try:
                 subprocess.check_call(["/usr/bin/bash", mhwd_script_path])
-                self.queue_event('debug', "Setup graphic card done.")
+                self.queue_event('debug', "Configure hardware - done")
             except subprocess.FileNotFoundError as e:
                 txt = _("Can't execute the MHWD script")
                 logging.error(txt)
