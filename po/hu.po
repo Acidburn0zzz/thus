@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: manjaro-thus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-05 23:04+0200\n"
-"PO-Revision-Date: 2014-05-15 14:53+0000\n"
-"Last-Translator: natanvarga <natanvarga@gmx.com>\n"
+"POT-Creation-Date: 2014-06-01 10:07+0200\n"
+"PO-Revision-Date: 2014-06-01 08:07+0000\n"
+"Last-Translator: manjarolinux <philm@manjaro.org>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/manjaro-thus/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,71 +89,71 @@ msgstr "Lecsatolás %s"
 msgid "Unmounting %s failed. Trying lazy arg."
 msgstr "%s lecsatolása nem sikerült. "
 
-#: src/installation/auto_partition.py:112
+#: src/installation/auto_partition.py:119
 msgid "Can't delete existent LVM volumes (see below)"
 msgstr "Nem lehet törölni meglevő LVM köteteket (lásd alább)"
 
-#: src/installation/auto_partition.py:122
+#: src/installation/auto_partition.py:129
 msgid "Can't close LUKS devices (see below)"
 msgstr "Nem lehet lezárni LUKS eszközöket (lásd alább)"
 
-#: src/installation/auto_partition.py:177
+#: src/installation/auto_partition.py:184
 #, python-format
 msgid "Unknown filesystem type %s"
 msgstr "Ismeretlen %s fájlrendszer"
 
-#: src/installation/auto_partition.py:187
+#: src/installation/auto_partition.py:194
 #, python-format
 msgid "Can't create filesystem %s"
 msgstr "Nem lehet a %s fájlrendszert létrehozni"
 
-#: src/installation/auto_partition.py:346
+#: src/installation/auto_partition.py:353
 #, python-format
 msgid "Thus will setup LUKS on device %s"
 msgstr "Telepíteni fogja a LUKS-t ezen az eszközön %s"
 
-#: src/installation/auto_partition.py:422
+#: src/installation/auto_partition.py:429
 #, python-format
 msgid "Total disk size: %dMiB"
 msgstr "Teljes lemezméret: %dMiB"
 
-#: src/installation/auto_partition.py:423
+#: src/installation/auto_partition.py:430
 #, python-format
 msgid "Boot partition size: %dMiB"
 msgstr "Boot partíció méret: %dMiB"
 
-#: src/installation/auto_partition.py:426
+#: src/installation/auto_partition.py:433
 #, python-format
 msgid "LVM physical volume size: %dMiB"
 msgstr "LVM fizikai kötet méret: %dMiB"
 
-#: src/installation/auto_partition.py:428
+#: src/installation/auto_partition.py:435
 #, python-format
 msgid "Swap partition size: %dMiB"
 msgstr "Swap partíció méret: %dMiB"
 
-#: src/installation/auto_partition.py:429
+#: src/installation/auto_partition.py:436
 #, python-format
 msgid "Root partition size: %dMiB"
 msgstr "Root partíció méret: %dMiB"
 
-#: src/installation/auto_partition.py:432
+#: src/installation/auto_partition.py:439
 #, python-format
 msgid "Home partition size: %dMiB"
 msgstr "Home partíció méret: %dMiB"
 
-#: src/installation/auto_partition.py:461
+#: src/installation/auto_partition.py:468
 msgid ""
 "Setup cannot detect size of your device, please use advanced installation "
 "routine for partitioning and mounting devices."
 msgstr "A telepítő nem tudja érzékelni az eszköz méretét, kérlek válaszd a haladó telepítési módot az eszközök partícionálására és csatolására."
 
-#: src/installation/auto_partition.py:594
+#: src/installation/auto_partition.py:601
 #, python-format
 msgid "Will setup LVM on device %s"
 msgstr "Telepíteni fogja az LVM-t ezen az eszközön %s"
 
-#: src/bootinfo.py:53 src/bootinfo.py:65 src/bootinfo.py:71 src/bootinfo.py:85
+#: src/bootinfo.py:54 src/bootinfo.py:66 src/bootinfo.py:72 src/bootinfo.py:86
 #: src/installation/alongside.py:220
 msgid "unknown"
 msgstr "ismeretlen"
@@ -847,196 +847,219 @@ msgstr "Nem lehet csatolni %s"
 msgid "Error running command: %s"
 msgstr "Hiba történt a %s futtatásakor."
 
-#: src/installation/process.py:713
+#: src/installation/process.py:683
+#, python-format
+msgid "Timeout running command: %s"
+msgstr ""
+
+#: src/installation/process.py:716
 msgid "Can't copy network configuration files"
 msgstr "Nem lehet másolni a hálózati konfigurációs fájlokat"
 
-#: src/installation/process.py:743 src/installation/process.py:804
+#: src/installation/process.py:746 src/installation/process.py:807
 #, python-format
 msgid "Added to fstab : UUID=%s %s %s %s 0 %s"
 msgstr "Hozzáadva ehhez: fstab : UUID=%s %s %s %s 0 %s"
 
-#: src/installation/process.py:757
+#: src/installation/process.py:760
 #, python-format
 msgid "Added to crypttab : %s"
 msgstr "Hozzáadva a crypttab-hoz : %s"
 
-#: src/installation/process.py:761
+#: src/installation/process.py:764
 #, python-format
 msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
 msgstr "fstab-hoz adva: /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
 
-#: src/installation/process.py:808
+#: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 msgstr "fstab-hoz adva: tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 
-#: src/installation/process.py:899
+#: src/installation/process.py:915
+msgid "ERROR on preparing 'etc/grub.d'-folder."
+msgstr ""
+
+#: src/installation/process.py:923
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in %s"
 msgstr "GRUB(2) rendszerbetöltő telepítése a %s"
 
-#: src/installation/process.py:909 src/installation/process.py:938
-msgid "ERROR installing GRUB(2) BIOS."
-msgstr "HIBA a GRUB(2) BIOS telepítése során."
+#: src/installation/process.py:943 src/installation/process.py:1031
+msgid ""
+"grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can"
+" continue."
+msgstr ""
 
-#: src/installation/process.py:935
+#: src/installation/process.py:951
 msgid "GRUB(2) BIOS has been successfully installed."
 msgstr "GRUB(2) BIOS telepítése sikeres."
 
-#: src/installation/process.py:959
-msgid "ERROR installing GRUB(2) UEFI."
-msgstr "HIBA történt GRUB(2) UEFI telepítésekor."
+#: src/installation/process.py:954
+msgid "ERROR installing GRUB(2) BIOS."
+msgstr "HIBA a GRUB(2) BIOS telepítése során."
 
-#: src/installation/process.py:967
+#: src/installation/process.py:971
 #, python-format
 msgid "Installing GRUB(2) UEFI %s boot loader"
 msgstr "GRUB(2) UEFI %s rendszerbetöltő telepítése"
 
-#: src/installation/process.py:980
+#: src/installation/process.py:984
 msgid "Installing Grub2 locales."
 msgstr "Grub2 lokális változók telepítése."
 
-#: src/installation/process.py:993
+#: src/installation/process.py:997
 #, python-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
 msgstr "Nem található OEM rendszerbetöltő a %s -n. Grub(2) másolása könyvtárba."
 
-#: src/installation/process.py:998
+#: src/installation/process.py:1002
 msgid "Copying Grub(2) into OEM dir failed. File Not Found."
 msgstr "Grub(2) másolása az OEM könyvtárba sikertelen. Fájl nem található."
 
-#: src/installation/process.py:1000
+#: src/installation/process.py:1004
 msgid "Copying Grub(2) into OEM dir failed. File Exists."
 msgstr "Grub(2) másolása az OEM könyvtárba sikertelen. A fájl már létezik."
 
-#: src/installation/process.py:1002
+#: src/installation/process.py:1006
 msgid "Copying Grub(2) into OEM dir failed. Unknown Error."
 msgstr "Grub(2) másolása az OEM könyvtárba sikertelen. Ismeretlen hiba."
 
-#: src/installation/process.py:1020
+#: src/installation/process.py:1024
 msgid "Generating grub.cfg"
 msgstr "grub.cfg generálása"
 
+#: src/installation/process.py:1039
+msgid "GRUB(2) UEFI has been successfully installed."
+msgstr ""
+
 #: src/installation/process.py:1042
+msgid "ERROR installing GRUB(2) UEFI."
+msgstr "HIBA történt GRUB(2) UEFI telepítésekor."
+
+#: src/installation/process.py:1057
 msgid "ERROR installing GRUB(2) locale."
 msgstr "HIBA a GRUB(2) lokális változók telepítésekor."
 
-#: src/installation/process.py:1051
+#: src/installation/process.py:1091
+msgid "Can't freeze/unfreeze xfs system"
+msgstr ""
+
+#: src/installation/process.py:1097
 #, python-format
 msgid "Enabled %s service."
 msgstr "Engedélyezett %s szolgáltatás."
 
-#: src/installation/process.py:1058
+#: src/installation/process.py:1104
 #, python-format
 msgid "Error creating password hash for user %s"
 msgstr "Jelszó hash nem került létrehozásra a következő felhasználónak: %s"
 
-#: src/installation/process.py:1064
+#: src/installation/process.py:1110
 #, python-format
 msgid "Error changing password for user %s"
 msgstr "Hiba a jelszó megváltoztatásánál a következő felhasználónál: %s"
 
-#: src/installation/process.py:1076
+#: src/installation/process.py:1122
 msgid "Setting hooks and modules in mkinitcpio.conf"
 msgstr "Kapcsolódási pontok és modulok beállításai a mkinitcpio.conf fájlban"
 
-#: src/installation/process.py:1167
+#: src/installation/process.py:1213
 #, python-format
 msgid "%s: Enable automatic login for user %s."
 msgstr "%s: Automatikus bejelentkezés engedélyezése a felhasználónak: %s"
 
-#: src/installation/process.py:1262 src/installation/process.py:1273
+#: src/installation/process.py:1319 src/installation/process.py:1330
 msgid "Configuring your new system"
 msgstr "Rendszer testreszabása"
 
-#: src/installation/process.py:1265
+#: src/installation/process.py:1322
 msgid "fstab file generated."
 msgstr "Az fstab fájl elkészült."
 
-#: src/installation/process.py:1271
+#: src/installation/process.py:1328
 msgid "Network configuration copied."
 msgstr "Hálózati konfiguráció lemásolva."
 
-#: src/installation/process.py:1297
+#: src/installation/process.py:1354
 msgid "Time zone set."
 msgstr "Időzóna beállítva."
 
-#: src/installation/process.py:1318
+#: src/installation/process.py:1375
 #, python-format
 msgid "Sudo configuration for user %s done."
 msgstr "Sudo konfiguráció %s felhasználónak elkészült."
 
-#: src/installation/process.py:1328
+#: src/installation/process.py:1385
 #, python-format
 msgid "User %s added."
 msgstr "%s felhasználó hozzáadva."
 
-#: src/installation/process.py:1340
+#: src/installation/process.py:1397
 #, python-format
 msgid "Hostname  %s set."
 msgstr "Hálózati név %s beállítása"
 
-#: src/installation/process.py:1345
+#: src/installation/process.py:1402
 msgid "Set root password."
 msgstr "root jelszó beállítása."
 
-#: src/installation/process.py:1348
+#: src/installation/process.py:1405
 msgid "Set the same password to root."
 msgstr "Azonos jelszó beállítása root-nak."
 
-#: src/installation/process.py:1354
+#: src/installation/process.py:1411
 msgid "Generating locales ..."
 msgstr "Lokális változók generálása..."
 
-#: src/installation/process.py:1372
+#: src/installation/process.py:1429
 msgid "Adjusting hardware clock ..."
 msgstr "Hardware óra beállítása..."
 
-#: src/installation/process.py:1381
+#: src/installation/process.py:1438
 msgid "Configuring hardware ..."
 msgstr "Hardware konfigurálása..."
 
-#: src/installation/process.py:1454
-msgid "Set up graphics card ..."
-msgstr "Grafikus kártya beállítása..."
+#: src/installation/process.py:1511
+msgid "Installing drivers ..."
+msgstr ""
 
-#: src/installation/process.py:1461
+#: src/installation/process.py:1518
 msgid "Can't execute the MHWD script"
 msgstr "Nem lehet futtatni az MHWD \"Manjaro Hardware Detection\" scriptet"
 
-#: src/installation/process.py:1474
+#: src/installation/process.py:1531
 msgid "Configure display manager ..."
 msgstr "Bejelentkező képernyő konfigurálása..."
 
-#: src/installation/process.py:1580
+#: src/installation/process.py:1641
 msgid "Configure System ..."
 msgstr "Rendszer Konfigurálás..."
 
-#: src/installation/process.py:1605
+#: src/installation/process.py:1666
 msgid "Removing live configuration (packages)"
 msgstr "Lemezről betöltött \"élő\" konfiguráció (csomagok) eltávolítása "
 
-#: src/installation/process.py:1621
+#: src/installation/process.py:1682
 msgid "Configuring package manager"
 msgstr "Csomagkezelő konfigurálása"
 
-#: src/installation/process.py:1633
+#: src/installation/process.py:1694
 msgid "Finished configuring package manager."
 msgstr "Csomagkezelő konfigurálása befejeződött."
 
-#: src/installation/process.py:1657
+#: src/installation/process.py:1718
 msgid "Running mkinitcpio ..."
 msgstr "mkinitcpio futtatása ..."
 
-#: src/installation/process.py:1660
+#: src/installation/process.py:1721
 msgid "Running mkinitcpio - done"
 msgstr "mkinitcpio futtatása - befejezve"
 
-#: src/installation/process.py:1676
+#: src/installation/process.py:1737
 msgid "Encrypting user home dir ..."
 msgstr "Felhasználói home könyvtár titkosítása ..."
 
-#: src/installation/process.py:1678
+#: src/installation/process.py:1739
 msgid "User home dir encrypted"
 msgstr "A felhasználói Home könyvtár titkosítva."
 

@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: manjaro-thus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-05 23:04+0200\n"
-"PO-Revision-Date: 2014-05-05 21:05+0000\n"
+"POT-Creation-Date: 2014-06-01 10:07+0200\n"
+"PO-Revision-Date: 2014-06-01 08:07+0000\n"
 "Last-Translator: manjarolinux <philm@manjaro.org>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/manjaro-thus/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -83,71 +83,71 @@ msgstr "Odpájanie %s"
 msgid "Unmounting %s failed. Trying lazy arg."
 msgstr "Odpájanie %s zlyhalo. Skúšam lenivý spôsob."
 
-#: src/installation/auto_partition.py:112
+#: src/installation/auto_partition.py:119
 msgid "Can't delete existent LVM volumes (see below)"
 msgstr "Nie je možné odstrániť existujúce zväzky LVM (pozrite nižšie)"
 
-#: src/installation/auto_partition.py:122
+#: src/installation/auto_partition.py:129
 msgid "Can't close LUKS devices (see below)"
 msgstr "Nie je možné uzatvoriť LUKS zariadenia (pozrite nižšie)"
 
-#: src/installation/auto_partition.py:177
+#: src/installation/auto_partition.py:184
 #, python-format
 msgid "Unknown filesystem type %s"
 msgstr ""
 
-#: src/installation/auto_partition.py:187
+#: src/installation/auto_partition.py:194
 #, python-format
 msgid "Can't create filesystem %s"
 msgstr "Nie je možné vytvoriť súborový systém %s"
 
-#: src/installation/auto_partition.py:346
+#: src/installation/auto_partition.py:353
 #, python-format
 msgid "Thus will setup LUKS on device %s"
 msgstr "Nastaví LUKS na zariadení %s"
 
-#: src/installation/auto_partition.py:422
+#: src/installation/auto_partition.py:429
 #, python-format
 msgid "Total disk size: %dMiB"
 msgstr ""
 
-#: src/installation/auto_partition.py:423
+#: src/installation/auto_partition.py:430
 #, python-format
 msgid "Boot partition size: %dMiB"
 msgstr ""
 
-#: src/installation/auto_partition.py:426
+#: src/installation/auto_partition.py:433
 #, python-format
 msgid "LVM physical volume size: %dMiB"
 msgstr ""
 
-#: src/installation/auto_partition.py:428
+#: src/installation/auto_partition.py:435
 #, python-format
 msgid "Swap partition size: %dMiB"
 msgstr ""
 
-#: src/installation/auto_partition.py:429
+#: src/installation/auto_partition.py:436
 #, python-format
 msgid "Root partition size: %dMiB"
 msgstr ""
 
-#: src/installation/auto_partition.py:432
+#: src/installation/auto_partition.py:439
 #, python-format
 msgid "Home partition size: %dMiB"
 msgstr ""
 
-#: src/installation/auto_partition.py:461
+#: src/installation/auto_partition.py:468
 msgid ""
 "Setup cannot detect size of your device, please use advanced installation "
 "routine for partitioning and mounting devices."
 msgstr "Inštalácia nedokáže zistiť veľkosť zariadenia. Prosím, použite pokročilú metódu inštalácie a rozdeľovania diskov."
 
-#: src/installation/auto_partition.py:594
+#: src/installation/auto_partition.py:601
 #, python-format
 msgid "Will setup LVM on device %s"
 msgstr "Nastaví LVM na zariadení %s"
 
-#: src/bootinfo.py:53 src/bootinfo.py:65 src/bootinfo.py:71 src/bootinfo.py:85
+#: src/bootinfo.py:54 src/bootinfo.py:66 src/bootinfo.py:72 src/bootinfo.py:86
 #: src/installation/alongside.py:220
 msgid "unknown"
 msgstr "neznáme"
@@ -841,196 +841,219 @@ msgstr "Nepodarilo sa pripojiť %s"
 msgid "Error running command: %s"
 msgstr "Chyba pri spúštaní príkazu: %s"
 
-#: src/installation/process.py:713
+#: src/installation/process.py:683
+#, python-format
+msgid "Timeout running command: %s"
+msgstr ""
+
+#: src/installation/process.py:716
 msgid "Can't copy network configuration files"
 msgstr "Nepodarilo sa skopírovať konfiguračné súbory siete"
 
-#: src/installation/process.py:743 src/installation/process.py:804
+#: src/installation/process.py:746 src/installation/process.py:807
 #, python-format
 msgid "Added to fstab : UUID=%s %s %s %s 0 %s"
 msgstr "Pridané do fstab: UUID=%s %s %s %s 0 %s"
 
-#: src/installation/process.py:757
+#: src/installation/process.py:760
 #, python-format
 msgid "Added to crypttab : %s"
 msgstr "Pridané do crypttab: %s"
 
-#: src/installation/process.py:761
+#: src/installation/process.py:764
 #, python-format
 msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
 msgstr "Pridané do fstab: /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
 
-#: src/installation/process.py:808
+#: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 msgstr "Pridané do fstab: tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 
-#: src/installation/process.py:899
+#: src/installation/process.py:915
+msgid "ERROR on preparing 'etc/grub.d'-folder."
+msgstr ""
+
+#: src/installation/process.py:923
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in %s"
 msgstr "Inštalujem GRUB(2) BIOS zavádzač do %s"
 
-#: src/installation/process.py:909 src/installation/process.py:938
-msgid "ERROR installing GRUB(2) BIOS."
-msgstr "Chyba pri inštalácii GRUB(2) BIOS."
+#: src/installation/process.py:943 src/installation/process.py:1031
+msgid ""
+"grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can"
+" continue."
+msgstr ""
 
-#: src/installation/process.py:935
+#: src/installation/process.py:951
 msgid "GRUB(2) BIOS has been successfully installed."
 msgstr "GRUB(2) BIOS bol úspešne nainštalovaný."
 
-#: src/installation/process.py:959
-msgid "ERROR installing GRUB(2) UEFI."
-msgstr "Chyba pri inštalácii GRUB(2) UEFI."
+#: src/installation/process.py:954
+msgid "ERROR installing GRUB(2) BIOS."
+msgstr "Chyba pri inštalácii GRUB(2) BIOS."
 
-#: src/installation/process.py:967
+#: src/installation/process.py:971
 #, python-format
 msgid "Installing GRUB(2) UEFI %s boot loader"
 msgstr "Inštalujem GRUB(2) UEFI %s zavádzač"
 
-#: src/installation/process.py:980
+#: src/installation/process.py:984
 msgid "Installing Grub2 locales."
 msgstr "Inštalujem lokalizáciu Grub2."
 
-#: src/installation/process.py:993
+#: src/installation/process.py:997
 #, python-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
 msgstr "V %s sa žiadny OEM zavádzač nenašiel. Kopíruje sa Grub(2) do priečinka."
 
-#: src/installation/process.py:998
+#: src/installation/process.py:1002
 msgid "Copying Grub(2) into OEM dir failed. File Not Found."
 msgstr "Kopírovanie Grub(2) do OEM prečinka zlyhalo. Súbor sa nenašiel."
 
-#: src/installation/process.py:1000
+#: src/installation/process.py:1004
 msgid "Copying Grub(2) into OEM dir failed. File Exists."
 msgstr "Kopírovanie Grub(2) do OEM prečinka zlyhalo. Súbor existuje."
 
-#: src/installation/process.py:1002
+#: src/installation/process.py:1006
 msgid "Copying Grub(2) into OEM dir failed. Unknown Error."
 msgstr "Kopírovanie Grub(2) do OEM prečinka zlyhalo. Neznáma chyba."
 
-#: src/installation/process.py:1020
+#: src/installation/process.py:1024
 msgid "Generating grub.cfg"
 msgstr "Generujem grub.cfg"
 
+#: src/installation/process.py:1039
+msgid "GRUB(2) UEFI has been successfully installed."
+msgstr ""
+
 #: src/installation/process.py:1042
+msgid "ERROR installing GRUB(2) UEFI."
+msgstr "Chyba pri inštalácii GRUB(2) UEFI."
+
+#: src/installation/process.py:1057
 msgid "ERROR installing GRUB(2) locale."
 msgstr "CHYBA pri inštalácii GRUB(2) lokalizácie"
 
-#: src/installation/process.py:1051
+#: src/installation/process.py:1091
+msgid "Can't freeze/unfreeze xfs system"
+msgstr ""
+
+#: src/installation/process.py:1097
 #, python-format
 msgid "Enabled %s service."
 msgstr "Služba %s povolená."
 
-#: src/installation/process.py:1058
+#: src/installation/process.py:1104
 #, python-format
 msgid "Error creating password hash for user %s"
 msgstr "Chyba pri vytváraní hash hesla pre používateľa %s"
 
-#: src/installation/process.py:1064
+#: src/installation/process.py:1110
 #, python-format
 msgid "Error changing password for user %s"
 msgstr "Chyba pri zmene hesla používateľa %s"
 
-#: src/installation/process.py:1076
+#: src/installation/process.py:1122
 msgid "Setting hooks and modules in mkinitcpio.conf"
 msgstr "Nastavovanie modulov v mkinitcpio.conf"
 
-#: src/installation/process.py:1167
+#: src/installation/process.py:1213
 #, python-format
 msgid "%s: Enable automatic login for user %s."
 msgstr "%s: Povoliť automatické prihlásenie pre používateľa %s."
 
-#: src/installation/process.py:1262 src/installation/process.py:1273
+#: src/installation/process.py:1319 src/installation/process.py:1330
 msgid "Configuring your new system"
 msgstr "Konfigurácia vášho nového systému"
 
-#: src/installation/process.py:1265
+#: src/installation/process.py:1322
 msgid "fstab file generated."
 msgstr "súbor fstab vytvorený."
 
-#: src/installation/process.py:1271
+#: src/installation/process.py:1328
 msgid "Network configuration copied."
 msgstr "Konfigurácia siete skopírovaná."
 
-#: src/installation/process.py:1297
+#: src/installation/process.py:1354
 msgid "Time zone set."
 msgstr "Časové pásmo nastavené."
 
-#: src/installation/process.py:1318
+#: src/installation/process.py:1375
 #, python-format
 msgid "Sudo configuration for user %s done."
 msgstr "Konfigurácia sudo pre používateľa %s hotová."
 
-#: src/installation/process.py:1328
+#: src/installation/process.py:1385
 #, python-format
 msgid "User %s added."
 msgstr "Používateľ %s pridaný."
 
-#: src/installation/process.py:1340
+#: src/installation/process.py:1397
 #, python-format
 msgid "Hostname  %s set."
 msgstr "Názov hostiteľa %s nastavený."
 
-#: src/installation/process.py:1345
+#: src/installation/process.py:1402
 msgid "Set root password."
 msgstr "Nastaviť heslo root."
 
-#: src/installation/process.py:1348
+#: src/installation/process.py:1405
 msgid "Set the same password to root."
 msgstr "Použiť rovnaké heslo ako root."
 
-#: src/installation/process.py:1354
+#: src/installation/process.py:1411
 msgid "Generating locales ..."
 msgstr "Generujem lokalizácie..."
 
-#: src/installation/process.py:1372
+#: src/installation/process.py:1429
 msgid "Adjusting hardware clock ..."
 msgstr "Nastavujem hardvérové hodiny..."
 
-#: src/installation/process.py:1381
+#: src/installation/process.py:1438
 msgid "Configuring hardware ..."
 msgstr "Konfigurujem hardvér..."
 
-#: src/installation/process.py:1454
-msgid "Set up graphics card ..."
-msgstr "Nastaviť grafickú kartu..."
+#: src/installation/process.py:1511
+msgid "Installing drivers ..."
+msgstr ""
 
-#: src/installation/process.py:1461
+#: src/installation/process.py:1518
 msgid "Can't execute the MHWD script"
 msgstr "Zlyhalo spustenie skriptu MHWD "
 
-#: src/installation/process.py:1474
+#: src/installation/process.py:1531
 msgid "Configure display manager ..."
 msgstr "Konfigurovať display manager..."
 
-#: src/installation/process.py:1580
+#: src/installation/process.py:1641
 msgid "Configure System ..."
 msgstr "Konfigurovať systém..."
 
-#: src/installation/process.py:1605
+#: src/installation/process.py:1666
 msgid "Removing live configuration (packages)"
 msgstr "Odstraňujem live konfiguráciu (balíčky)"
 
-#: src/installation/process.py:1621
+#: src/installation/process.py:1682
 msgid "Configuring package manager"
 msgstr "Konfigurujem správcu balíčkov"
 
-#: src/installation/process.py:1633
+#: src/installation/process.py:1694
 msgid "Finished configuring package manager."
 msgstr "Dokončujem konfiguráciu správcu balíčkov."
 
-#: src/installation/process.py:1657
+#: src/installation/process.py:1718
 msgid "Running mkinitcpio ..."
 msgstr "Spúšťam mkinitcpio..."
 
-#: src/installation/process.py:1660
+#: src/installation/process.py:1721
 msgid "Running mkinitcpio - done"
 msgstr "Spustenie mkinitcpio- hotovo"
 
-#: src/installation/process.py:1676
+#: src/installation/process.py:1737
 msgid "Encrypting user home dir ..."
 msgstr "Šifrujem domovský adresár..."
 
-#: src/installation/process.py:1678
+#: src/installation/process.py:1739
 msgid "User home dir encrypted"
 msgstr "Používateľský domovský priečinok je zašifrovaný"
 

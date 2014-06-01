@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: manjaro-thus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-05 23:04+0200\n"
-"PO-Revision-Date: 2014-05-05 21:05+0000\n"
+"POT-Creation-Date: 2014-06-01 10:07+0200\n"
+"PO-Revision-Date: 2014-06-01 08:07+0000\n"
 "Last-Translator: manjarolinux <philm@manjaro.org>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/manjaro-thus/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -85,71 +85,71 @@ msgstr "Демонтиране %s"
 msgid "Unmounting %s failed. Trying lazy arg."
 msgstr "Демонтирането на %s се провали. Опит с мързелив арг."
 
-#: src/installation/auto_partition.py:112
+#: src/installation/auto_partition.py:119
 msgid "Can't delete existent LVM volumes (see below)"
 msgstr "Не може да се изтрият съществуващите LVM дялове (виж по-долу)"
 
-#: src/installation/auto_partition.py:122
+#: src/installation/auto_partition.py:129
 msgid "Can't close LUKS devices (see below)"
 msgstr "Не може да се затворят LUKS устройствата (виж по-долу)"
 
-#: src/installation/auto_partition.py:177
+#: src/installation/auto_partition.py:184
 #, python-format
 msgid "Unknown filesystem type %s"
 msgstr "Неизвестна файлова система %s"
 
-#: src/installation/auto_partition.py:187
+#: src/installation/auto_partition.py:194
 #, python-format
 msgid "Can't create filesystem %s"
 msgstr "Не може да се създаде файлова система %s"
 
-#: src/installation/auto_partition.py:346
+#: src/installation/auto_partition.py:353
 #, python-format
 msgid "Thus will setup LUKS on device %s"
 msgstr "Thus ще инсталира LUKS на устройство %s"
 
-#: src/installation/auto_partition.py:422
-#, python-format
-msgid "Total disk size: %dMiB"
-msgstr ""
-
-#: src/installation/auto_partition.py:423
-#, python-format
-msgid "Boot partition size: %dMiB"
-msgstr ""
-
-#: src/installation/auto_partition.py:426
-#, python-format
-msgid "LVM physical volume size: %dMiB"
-msgstr ""
-
-#: src/installation/auto_partition.py:428
-#, python-format
-msgid "Swap partition size: %dMiB"
-msgstr ""
-
 #: src/installation/auto_partition.py:429
 #, python-format
-msgid "Root partition size: %dMiB"
-msgstr ""
+msgid "Total disk size: %dMiB"
+msgstr "Общ размер на диска: %dMiB"
 
-#: src/installation/auto_partition.py:432
+#: src/installation/auto_partition.py:430
+#, python-format
+msgid "Boot partition size: %dMiB"
+msgstr "Размер на зареждащ дял: %dMiB"
+
+#: src/installation/auto_partition.py:433
+#, python-format
+msgid "LVM physical volume size: %dMiB"
+msgstr "Размер на LVM дяла: %dMiB"
+
+#: src/installation/auto_partition.py:435
+#, python-format
+msgid "Swap partition size: %dMiB"
+msgstr "Размер на дял за виртуална памет: %dMiB"
+
+#: src/installation/auto_partition.py:436
+#, python-format
+msgid "Root partition size: %dMiB"
+msgstr "Размер на коренов дял: %dMiB"
+
+#: src/installation/auto_partition.py:439
 #, python-format
 msgid "Home partition size: %dMiB"
-msgstr ""
+msgstr "Размер на домашен дял: %dMiB"
 
-#: src/installation/auto_partition.py:461
+#: src/installation/auto_partition.py:468
 msgid ""
 "Setup cannot detect size of your device, please use advanced installation "
 "routine for partitioning and mounting devices."
 msgstr "Настройката не може да определи размера на вашето устройство, моля използвайте настройката за напреднали за да разделите и монтирате устройствата."
 
-#: src/installation/auto_partition.py:594
+#: src/installation/auto_partition.py:601
 #, python-format
 msgid "Will setup LVM on device %s"
 msgstr "Ще бъде инсталиран LVM на устройство %s"
 
-#: src/bootinfo.py:53 src/bootinfo.py:65 src/bootinfo.py:71 src/bootinfo.py:85
+#: src/bootinfo.py:54 src/bootinfo.py:66 src/bootinfo.py:72 src/bootinfo.py:86
 #: src/installation/alongside.py:220
 msgid "unknown"
 msgstr "неизвестно"
@@ -744,12 +744,12 @@ msgstr "Не е възможно да се монтира %s в %s"
 #: src/installation/process.py:349
 #, python-format
 msgid "Mounting swap %s"
-msgstr ""
+msgstr "Монтиране на виртуалната памет %s"
 
 #: src/installation/process.py:353
 #, python-format
 msgid "Can't mount %s"
-msgstr ""
+msgstr "Не може да се монтира %s"
 
 #: src/installation/process.py:368
 #, python-format
@@ -836,203 +836,226 @@ msgstr "Специалните директории все още не са мо
 #: src/installation/process.py:652 src/installation/process.py:658
 #, python-format
 msgid "Unable to umount %s"
-msgstr "Не беше възможно размонтиране на %s"
+msgstr "Не беше възможно демонтиране на %s"
 
 #: src/installation/process.py:680
 #, python-format
 msgid "Error running command: %s"
 msgstr "Грешка при изпълнение на команда: %s"
 
-#: src/installation/process.py:713
+#: src/installation/process.py:683
+#, python-format
+msgid "Timeout running command: %s"
+msgstr ""
+
+#: src/installation/process.py:716
 msgid "Can't copy network configuration files"
 msgstr "Не може да се копират файловете на мрежовата конфигурация."
 
-#: src/installation/process.py:743 src/installation/process.py:804
+#: src/installation/process.py:746 src/installation/process.py:807
 #, python-format
 msgid "Added to fstab : UUID=%s %s %s %s 0 %s"
 msgstr "Добавено към fstab : UUID=%s %s %s %s 0 %s"
 
-#: src/installation/process.py:757
+#: src/installation/process.py:760
 #, python-format
 msgid "Added to crypttab : %s"
 msgstr "Добавено към crypttab : %s"
 
-#: src/installation/process.py:761
+#: src/installation/process.py:764
 #, python-format
 msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
 msgstr "Добавено към  fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
 
-#: src/installation/process.py:808
+#: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 msgstr "Добавено към fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 
-#: src/installation/process.py:899
+#: src/installation/process.py:915
+msgid "ERROR on preparing 'etc/grub.d'-folder."
+msgstr ""
+
+#: src/installation/process.py:923
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in %s"
 msgstr "Инсталиране на GRUB(2) BIOS мениджър на зареждането в %s"
 
-#: src/installation/process.py:909 src/installation/process.py:938
-msgid "ERROR installing GRUB(2) BIOS."
-msgstr "ГРЕШКА при инсталиране на GRUB(2) BIOS"
+#: src/installation/process.py:943 src/installation/process.py:1031
+msgid ""
+"grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can"
+" continue."
+msgstr ""
 
-#: src/installation/process.py:935
+#: src/installation/process.py:951
 msgid "GRUB(2) BIOS has been successfully installed."
 msgstr "GRUB(2) BIOS е успешно инсталиран."
 
-#: src/installation/process.py:959
-msgid "ERROR installing GRUB(2) UEFI."
-msgstr "ГРЕШКА при инсталиране на GRUB(2) UEFI."
+#: src/installation/process.py:954
+msgid "ERROR installing GRUB(2) BIOS."
+msgstr "ГРЕШКА при инсталиране на GRUB(2) BIOS"
 
-#: src/installation/process.py:967
+#: src/installation/process.py:971
 #, python-format
 msgid "Installing GRUB(2) UEFI %s boot loader"
 msgstr "Инсталиране на GRUB(2) UEFI %s boot loader"
 
-#: src/installation/process.py:980
+#: src/installation/process.py:984
 msgid "Installing Grub2 locales."
 msgstr "Инсталиране на Grub2 локали."
 
-#: src/installation/process.py:993
+#: src/installation/process.py:997
 #, python-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
 msgstr "Не е намерено ОЕМ зареждащо устройство в %s. Копиране на Grub(2) в директорията."
 
-#: src/installation/process.py:998
+#: src/installation/process.py:1002
 msgid "Copying Grub(2) into OEM dir failed. File Not Found."
 msgstr "Копирането на Grub(2) в директорията на OEM се провали. Файла Не е Намерен."
 
-#: src/installation/process.py:1000
+#: src/installation/process.py:1004
 msgid "Copying Grub(2) into OEM dir failed. File Exists."
 msgstr "Копирането на Grub(2) в директорията на OEM се провали. Файла Съществува."
 
-#: src/installation/process.py:1002
+#: src/installation/process.py:1006
 msgid "Copying Grub(2) into OEM dir failed. Unknown Error."
 msgstr "Копирането на Grub(2) в директорията на OEM се провали. Непозната Грешка."
 
-#: src/installation/process.py:1020
+#: src/installation/process.py:1024
 msgid "Generating grub.cfg"
 msgstr "Генериране на grub.cfg"
 
+#: src/installation/process.py:1039
+msgid "GRUB(2) UEFI has been successfully installed."
+msgstr ""
+
 #: src/installation/process.py:1042
+msgid "ERROR installing GRUB(2) UEFI."
+msgstr "ГРЕШКА при инсталиране на GRUB(2) UEFI."
+
+#: src/installation/process.py:1057
 msgid "ERROR installing GRUB(2) locale."
 msgstr "ГРЕШКА при инсталиране превод на GRUB(2)"
 
-#: src/installation/process.py:1051
+#: src/installation/process.py:1091
+msgid "Can't freeze/unfreeze xfs system"
+msgstr ""
+
+#: src/installation/process.py:1097
 #, python-format
 msgid "Enabled %s service."
 msgstr "Активирана %s услуга."
 
-#: src/installation/process.py:1058
+#: src/installation/process.py:1104
 #, python-format
 msgid "Error creating password hash for user %s"
 msgstr "Грешка при създаване на хаш-парола за потребител %s"
 
-#: src/installation/process.py:1064
+#: src/installation/process.py:1110
 #, python-format
 msgid "Error changing password for user %s"
 msgstr "Грешка при промяна на паролата на потребител %s"
 
-#: src/installation/process.py:1076
+#: src/installation/process.py:1122
 msgid "Setting hooks and modules in mkinitcpio.conf"
 msgstr "Настройване на куки и модули в mkinitcpio.conf"
 
-#: src/installation/process.py:1167
+#: src/installation/process.py:1213
 #, python-format
 msgid "%s: Enable automatic login for user %s."
 msgstr "%s: Активиране на автоматичния вход за потребител %s"
 
-#: src/installation/process.py:1262 src/installation/process.py:1273
+#: src/installation/process.py:1319 src/installation/process.py:1330
 msgid "Configuring your new system"
 msgstr "Конфигуриране на Вашата нова система"
 
-#: src/installation/process.py:1265
+#: src/installation/process.py:1322
 msgid "fstab file generated."
 msgstr "fstab е генериран."
 
-#: src/installation/process.py:1271
+#: src/installation/process.py:1328
 msgid "Network configuration copied."
 msgstr "Мрежова конфигурация копирана."
 
-#: src/installation/process.py:1297
+#: src/installation/process.py:1354
 msgid "Time zone set."
 msgstr "Часовата зона е определена."
 
-#: src/installation/process.py:1318
+#: src/installation/process.py:1375
 #, python-format
 msgid "Sudo configuration for user %s done."
 msgstr "Sudo конфигурация за потребител %s е готова."
 
-#: src/installation/process.py:1328
+#: src/installation/process.py:1385
 #, python-format
 msgid "User %s added."
 msgstr "Потребител %s добавен."
 
-#: src/installation/process.py:1340
+#: src/installation/process.py:1397
 #, python-format
 msgid "Hostname  %s set."
 msgstr "Името на компютъра %s е избрано."
 
-#: src/installation/process.py:1345
+#: src/installation/process.py:1402
 msgid "Set root password."
 msgstr "Въведи парола за root."
 
-#: src/installation/process.py:1348
+#: src/installation/process.py:1405
 msgid "Set the same password to root."
 msgstr "Задай съща парола на root"
 
-#: src/installation/process.py:1354
+#: src/installation/process.py:1411
 msgid "Generating locales ..."
 msgstr "Създаване на локали ..."
 
-#: src/installation/process.py:1372
+#: src/installation/process.py:1429
 msgid "Adjusting hardware clock ..."
 msgstr "Сверяване на хардуерния часовник..."
 
-#: src/installation/process.py:1381
+#: src/installation/process.py:1438
 msgid "Configuring hardware ..."
 msgstr "Конфигуриране на хардуер..."
 
-#: src/installation/process.py:1454
-msgid "Set up graphics card ..."
-msgstr "Настройване на видео картата..."
+#: src/installation/process.py:1511
+msgid "Installing drivers ..."
+msgstr ""
 
-#: src/installation/process.py:1461
+#: src/installation/process.py:1518
 msgid "Can't execute the MHWD script"
 msgstr "Не е възможно да се изпълни MHWD скрипт"
 
-#: src/installation/process.py:1474
+#: src/installation/process.py:1531
 msgid "Configure display manager ..."
 msgstr "Конфигуриране мениджъра на прозорци..."
 
-#: src/installation/process.py:1580
+#: src/installation/process.py:1641
 msgid "Configure System ..."
 msgstr "Конфигуриране на Системата ..."
 
-#: src/installation/process.py:1605
+#: src/installation/process.py:1666
 msgid "Removing live configuration (packages)"
 msgstr "Премахване пакети принадлежащи на (живия) инсталатор"
 
-#: src/installation/process.py:1621
+#: src/installation/process.py:1682
 msgid "Configuring package manager"
 msgstr "Конфигуриране мениджъра на пакети"
 
-#: src/installation/process.py:1633
+#: src/installation/process.py:1694
 msgid "Finished configuring package manager."
 msgstr "Край на конфигурирането мениджър на пакети."
 
-#: src/installation/process.py:1657
+#: src/installation/process.py:1718
 msgid "Running mkinitcpio ..."
 msgstr "Изпълнение на mkinitcpio ..."
 
-#: src/installation/process.py:1660
+#: src/installation/process.py:1721
 msgid "Running mkinitcpio - done"
 msgstr "Изпълнение на mkinitcpio ... готово"
 
-#: src/installation/process.py:1676
+#: src/installation/process.py:1737
 msgid "Encrypting user home dir ..."
 msgstr "Криптиране на home директорията ..."
 
-#: src/installation/process.py:1678
+#: src/installation/process.py:1739
 msgid "User home dir encrypted"
 msgstr "Домашната директория на потребителя е криптирана"
 
@@ -1215,7 +1238,7 @@ msgstr "Манджаро инсталатор - Информация"
 
 #: src/show_message.py:88
 msgid "Manjaro Installer - Confirmation"
-msgstr ""
+msgstr "Манджаро инсталатор - Потвърждаване"
 
 #: src/slides.py:94 src/slides.py:109
 msgid ""
@@ -1397,7 +1420,7 @@ msgstr "Прочетете повече в https://wiki.archlinux.org/index.php/
 
 #: src/user_info.py:257
 msgid "Are you sure you want to encrypt your home directory?\n"
-msgstr "Наистина ли искате да криптирате home директорията?\n"
+msgstr "Наистина ли искате да криптирате домашната директорията?\n"
 
 #: src/user_info.py:345
 msgid "Invalid characters entered"

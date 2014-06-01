@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: manjaro-thus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-05 23:04+0200\n"
-"PO-Revision-Date: 2014-05-07 11:47+0000\n"
-"Last-Translator: KriZ0 <kdrejer@gmail.com>\n"
+"POT-Creation-Date: 2014-06-01 10:07+0200\n"
+"PO-Revision-Date: 2014-06-01 08:07+0000\n"
+"Last-Translator: manjarolinux <philm@manjaro.org>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/manjaro-thus/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,71 +84,71 @@ msgstr "Afmonterer %s"
 msgid "Unmounting %s failed. Trying lazy arg."
 msgstr "Afmontering af %s slået fejl. Forsøger med lazy-argumentet."
 
-#: src/installation/auto_partition.py:112
+#: src/installation/auto_partition.py:119
 msgid "Can't delete existent LVM volumes (see below)"
 msgstr "Kan ikke slette eksisterende LVM-enheder (se nedenfor)"
 
-#: src/installation/auto_partition.py:122
+#: src/installation/auto_partition.py:129
 msgid "Can't close LUKS devices (see below)"
 msgstr "Kan ikke lukke LUKS-enheder (se nedenfor)"
 
-#: src/installation/auto_partition.py:177
+#: src/installation/auto_partition.py:184
 #, python-format
 msgid "Unknown filesystem type %s"
 msgstr "Ukendt filsystem type %s"
 
-#: src/installation/auto_partition.py:187
+#: src/installation/auto_partition.py:194
 #, python-format
 msgid "Can't create filesystem %s"
 msgstr "Kan ikke oprette filsystemet %s"
 
-#: src/installation/auto_partition.py:346
+#: src/installation/auto_partition.py:353
 #, python-format
 msgid "Thus will setup LUKS on device %s"
 msgstr "Thus vil opsætte LUKS på enheden %s"
 
-#: src/installation/auto_partition.py:422
+#: src/installation/auto_partition.py:429
 #, python-format
 msgid "Total disk size: %dMiB"
 msgstr "Total disk størrelse: %dMiB"
 
-#: src/installation/auto_partition.py:423
+#: src/installation/auto_partition.py:430
 #, python-format
 msgid "Boot partition size: %dMiB"
 msgstr "Boot partitions størrelse: %dMiB"
 
-#: src/installation/auto_partition.py:426
+#: src/installation/auto_partition.py:433
 #, python-format
 msgid "LVM physical volume size: %dMiB"
 msgstr ""
 
-#: src/installation/auto_partition.py:428
+#: src/installation/auto_partition.py:435
 #, python-format
 msgid "Swap partition size: %dMiB"
 msgstr "Swap partition størrelse: %dMiB"
 
-#: src/installation/auto_partition.py:429
+#: src/installation/auto_partition.py:436
 #, python-format
 msgid "Root partition size: %dMiB"
 msgstr "Rod partition størrelse: %dMiB"
 
-#: src/installation/auto_partition.py:432
+#: src/installation/auto_partition.py:439
 #, python-format
 msgid "Home partition size: %dMiB"
 msgstr "Hjemme partition størrelse: %dMiB"
 
-#: src/installation/auto_partition.py:461
+#: src/installation/auto_partition.py:468
 msgid ""
 "Setup cannot detect size of your device, please use advanced installation "
 "routine for partitioning and mounting devices."
 msgstr "Programmet kan ikke læse størrelsen af din enhed. Anvend den avancerede installationsprocedure til at partitionere og montere enhederne."
 
-#: src/installation/auto_partition.py:594
+#: src/installation/auto_partition.py:601
 #, python-format
 msgid "Will setup LVM on device %s"
 msgstr "Opsætter LVM på enheden %s"
 
-#: src/bootinfo.py:53 src/bootinfo.py:65 src/bootinfo.py:71 src/bootinfo.py:85
+#: src/bootinfo.py:54 src/bootinfo.py:66 src/bootinfo.py:72 src/bootinfo.py:86
 #: src/installation/alongside.py:220
 msgid "unknown"
 msgstr "ukendt"
@@ -842,196 +842,219 @@ msgstr "Ude af stand til at afmontere %s"
 msgid "Error running command: %s"
 msgstr "Fejl ved kommandoen: %s"
 
-#: src/installation/process.py:713
+#: src/installation/process.py:683
+#, python-format
+msgid "Timeout running command: %s"
+msgstr ""
+
+#: src/installation/process.py:716
 msgid "Can't copy network configuration files"
 msgstr "Kan ikke kopiere filer til netværksopsætning"
 
-#: src/installation/process.py:743 src/installation/process.py:804
+#: src/installation/process.py:746 src/installation/process.py:807
 #, python-format
 msgid "Added to fstab : UUID=%s %s %s %s 0 %s"
 msgstr "Tilføjet til fstab : UUID=%s %s %s %s 0 %s"
 
-#: src/installation/process.py:757
+#: src/installation/process.py:760
 #, python-format
 msgid "Added to crypttab : %s"
 msgstr "Tilføjet til crypttab : %s"
 
-#: src/installation/process.py:761
+#: src/installation/process.py:764
 #, python-format
 msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
 msgstr "Tilføjet til fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
 
-#: src/installation/process.py:808
+#: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 msgstr "Tilføjet til fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 
-#: src/installation/process.py:899
+#: src/installation/process.py:915
+msgid "ERROR on preparing 'etc/grub.d'-folder."
+msgstr ""
+
+#: src/installation/process.py:923
 #, python-format
 msgid "Installing GRUB(2) BIOS boot loader in %s"
 msgstr "Installerer Grub(2) BIOS bootloader på %s"
 
-#: src/installation/process.py:909 src/installation/process.py:938
-msgid "ERROR installing GRUB(2) BIOS."
-msgstr "Fejl ved installation af GRUB(2) BIOS."
+#: src/installation/process.py:943 src/installation/process.py:1031
+msgid ""
+"grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can"
+" continue."
+msgstr ""
 
-#: src/installation/process.py:935
+#: src/installation/process.py:951
 msgid "GRUB(2) BIOS has been successfully installed."
 msgstr "GRUB(2) BIOS er installeret korrekt."
 
-#: src/installation/process.py:959
-msgid "ERROR installing GRUB(2) UEFI."
-msgstr "Fejl ved installation af GRUB(2) UEFI."
+#: src/installation/process.py:954
+msgid "ERROR installing GRUB(2) BIOS."
+msgstr "Fejl ved installation af GRUB(2) BIOS."
 
-#: src/installation/process.py:967
+#: src/installation/process.py:971
 #, python-format
 msgid "Installing GRUB(2) UEFI %s boot loader"
 msgstr "Installerer GRUB(2) UEFI %s bootloader"
 
-#: src/installation/process.py:980
+#: src/installation/process.py:984
 msgid "Installing Grub2 locales."
 msgstr "Installerer regionsdata for Grub2."
 
-#: src/installation/process.py:993
+#: src/installation/process.py:997
 #, python-format
 msgid "No OEM loader found in %s. Copying Grub(2) into dir."
 msgstr "Ingen OEM-loader fundet i %s. Kopierer Grub(2) ind i mappen."
 
-#: src/installation/process.py:998
+#: src/installation/process.py:1002
 msgid "Copying Grub(2) into OEM dir failed. File Not Found."
 msgstr "Kopiering af Grub(2) til OEM-mappe slået fejl. Fil ikke fundet."
 
-#: src/installation/process.py:1000
+#: src/installation/process.py:1004
 msgid "Copying Grub(2) into OEM dir failed. File Exists."
 msgstr "Kopiering af Grub(2) til OEM-mappe slået fejl. Fil findes allerede."
 
-#: src/installation/process.py:1002
+#: src/installation/process.py:1006
 msgid "Copying Grub(2) into OEM dir failed. Unknown Error."
 msgstr "Kopiering af Grub(2) til OEM-mappe slået fejl. Ukendt fejl."
 
-#: src/installation/process.py:1020
+#: src/installation/process.py:1024
 msgid "Generating grub.cfg"
 msgstr "Genererer grub.cfg"
 
+#: src/installation/process.py:1039
+msgid "GRUB(2) UEFI has been successfully installed."
+msgstr ""
+
 #: src/installation/process.py:1042
+msgid "ERROR installing GRUB(2) UEFI."
+msgstr "Fejl ved installation af GRUB(2) UEFI."
+
+#: src/installation/process.py:1057
 msgid "ERROR installing GRUB(2) locale."
 msgstr "Fejl ved installation af lokaldata for GRUB(2)."
 
-#: src/installation/process.py:1051
+#: src/installation/process.py:1091
+msgid "Can't freeze/unfreeze xfs system"
+msgstr ""
+
+#: src/installation/process.py:1097
 #, python-format
 msgid "Enabled %s service."
 msgstr "Aktiveret tjenesten %s."
 
-#: src/installation/process.py:1058
+#: src/installation/process.py:1104
 #, python-format
 msgid "Error creating password hash for user %s"
 msgstr "Fejl ved etablering af hash for adgangskode for brugeren %s"
 
-#: src/installation/process.py:1064
+#: src/installation/process.py:1110
 #, python-format
 msgid "Error changing password for user %s"
 msgstr "Fejl ved ændring af af adgangskode for brugeren %s"
 
-#: src/installation/process.py:1076
+#: src/installation/process.py:1122
 msgid "Setting hooks and modules in mkinitcpio.conf"
 msgstr "Sætter hooks og moduler i mkinitcpio.conf"
 
-#: src/installation/process.py:1167
+#: src/installation/process.py:1213
 #, python-format
 msgid "%s: Enable automatic login for user %s."
 msgstr "%s: Aktiver automatisk login for brugeren %s."
 
-#: src/installation/process.py:1262 src/installation/process.py:1273
+#: src/installation/process.py:1319 src/installation/process.py:1330
 msgid "Configuring your new system"
 msgstr "Konfigurerer dit nye system"
 
-#: src/installation/process.py:1265
+#: src/installation/process.py:1322
 msgid "fstab file generated."
 msgstr "fstab-fil genereret."
 
-#: src/installation/process.py:1271
+#: src/installation/process.py:1328
 msgid "Network configuration copied."
 msgstr "Netværksopsætning kopieret."
 
-#: src/installation/process.py:1297
+#: src/installation/process.py:1354
 msgid "Time zone set."
 msgstr "Tidszone sat."
 
-#: src/installation/process.py:1318
+#: src/installation/process.py:1375
 #, python-format
 msgid "Sudo configuration for user %s done."
 msgstr "Sudo-opsætning for brugeren %s er fuldført."
 
-#: src/installation/process.py:1328
+#: src/installation/process.py:1385
 #, python-format
 msgid "User %s added."
 msgstr "Brugeren %s tilføjet."
 
-#: src/installation/process.py:1340
+#: src/installation/process.py:1397
 #, python-format
 msgid "Hostname  %s set."
 msgstr "Værtsnavn sat til %s."
 
-#: src/installation/process.py:1345
+#: src/installation/process.py:1402
 msgid "Set root password."
 msgstr "Sæt root-adgangskode."
 
-#: src/installation/process.py:1348
+#: src/installation/process.py:1405
 msgid "Set the same password to root."
 msgstr "Sæt samme adgangskode for root."
 
-#: src/installation/process.py:1354
+#: src/installation/process.py:1411
 msgid "Generating locales ..."
 msgstr "Genererer data for region..."
 
-#: src/installation/process.py:1372
+#: src/installation/process.py:1429
 msgid "Adjusting hardware clock ..."
 msgstr "Justerer hardware-uret..."
 
-#: src/installation/process.py:1381
+#: src/installation/process.py:1438
 msgid "Configuring hardware ..."
 msgstr "Konfigurerer hardware..."
 
-#: src/installation/process.py:1454
-msgid "Set up graphics card ..."
-msgstr "Opsætter grafikkort..."
+#: src/installation/process.py:1511
+msgid "Installing drivers ..."
+msgstr ""
 
-#: src/installation/process.py:1461
+#: src/installation/process.py:1518
 msgid "Can't execute the MHWD script"
 msgstr "Kan ikke køre KHWD-scriptet"
 
-#: src/installation/process.py:1474
+#: src/installation/process.py:1531
 msgid "Configure display manager ..."
 msgstr "Opsætter display manager..."
 
-#: src/installation/process.py:1580
+#: src/installation/process.py:1641
 msgid "Configure System ..."
 msgstr "Opsætter system..."
 
-#: src/installation/process.py:1605
+#: src/installation/process.py:1666
 msgid "Removing live configuration (packages)"
 msgstr "Fjerner livekonfiguration (pakker)"
 
-#: src/installation/process.py:1621
+#: src/installation/process.py:1682
 msgid "Configuring package manager"
 msgstr "Konfigurerer pakkestyringsprogram"
 
-#: src/installation/process.py:1633
+#: src/installation/process.py:1694
 msgid "Finished configuring package manager."
 msgstr "Konfiguration af pakkestyringsprogram fuldført."
 
-#: src/installation/process.py:1657
+#: src/installation/process.py:1718
 msgid "Running mkinitcpio ..."
 msgstr "Kører mkinitcpio..."
 
-#: src/installation/process.py:1660
+#: src/installation/process.py:1721
 msgid "Running mkinitcpio - done"
 msgstr "Kører mkinitcpio... færdig"
 
-#: src/installation/process.py:1676
+#: src/installation/process.py:1737
 msgid "Encrypting user home dir ..."
 msgstr "Krypterer brugerens home-mappe ..."
 
-#: src/installation/process.py:1678
+#: src/installation/process.py:1739
 msgid "User home dir encrypted"
 msgstr "Brugerens home-mappe krypteret"
 
