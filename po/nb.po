@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: manjaro-thus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-01 10:07+0200\n"
-"PO-Revision-Date: 2014-06-01 08:07+0000\n"
-"Last-Translator: manjarolinux <philm@manjaro.org>\n"
+"PO-Revision-Date: 2014-06-02 13:43+0000\n"
+"Last-Translator: pjhalsli <pjhalsli@gmail.com>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/projects/p/manjaro-thus/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -847,7 +847,7 @@ msgstr "Feil kjører kommandoen: %s"
 #: src/installation/process.py:683
 #, python-format
 msgid "Timeout running command: %s"
-msgstr ""
+msgstr "Tidsavbrudd under kommando: %s"
 
 #: src/installation/process.py:716
 msgid "Can't copy network configuration files"
@@ -874,7 +874,7 @@ msgstr "Lagt til i fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 
 #: src/installation/process.py:915
 msgid "ERROR on preparing 'etc/grub.d'-folder."
-msgstr ""
+msgstr "FEIL under klargjøring av 'etc/grub.d'-folder"
 
 #: src/installation/process.py:923
 #, python-format
@@ -885,7 +885,7 @@ msgstr "Installerer GRUB(2) BIOS bootloader i %s"
 msgid ""
 "grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can"
 " continue."
-msgstr ""
+msgstr "grub-mkconfig ser ut til å være fastlåst. Tvungen avslutnng av grub-mount og os-prober så vi kan fortsette"
 
 #: src/installation/process.py:951
 msgid "GRUB(2) BIOS has been successfully installed."
@@ -927,7 +927,7 @@ msgstr "Genererer grub.cfg"
 
 #: src/installation/process.py:1039
 msgid "GRUB(2) UEFI has been successfully installed."
-msgstr ""
+msgstr "GRUB(2) UEFI har blitt installert."
 
 #: src/installation/process.py:1042
 msgid "ERROR installing GRUB(2) UEFI."
@@ -939,7 +939,7 @@ msgstr "ERROR installere GRUB(2) locale."
 
 #: src/installation/process.py:1091
 msgid "Can't freeze/unfreeze xfs system"
-msgstr ""
+msgstr "Kan ikke låse/låse opp xfs system"
 
 #: src/installation/process.py:1097
 #, python-format
@@ -1018,7 +1018,7 @@ msgstr "Konfigurasjon av maskinvare ..."
 
 #: src/installation/process.py:1511
 msgid "Installing drivers ..."
-msgstr ""
+msgstr "Installerer drivere"
 
 #: src/installation/process.py:1518
 msgid "Can't execute the MHWD script"

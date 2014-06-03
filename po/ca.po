@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: manjaro-thus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-01 10:07+0200\n"
-"PO-Revision-Date: 2014-06-01 08:07+0000\n"
-"Last-Translator: manjarolinux <philm@manjaro.org>\n"
+"PO-Revision-Date: 2014-06-01 19:50+0000\n"
+"Last-Translator: asmolero <alsamolero@gmail.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/manjaro-thus/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -853,7 +853,7 @@ msgstr "Error executant la comanda %s"
 #: src/installation/process.py:683
 #, python-format
 msgid "Timeout running command: %s"
-msgstr ""
+msgstr "S'ha esgotat el temps executant l'ordre: %s"
 
 #: src/installation/process.py:716
 msgid "Can't copy network configuration files"
@@ -880,7 +880,7 @@ msgstr "S'ha afegit al fstab: tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 
 #: src/installation/process.py:915
 msgid "ERROR on preparing 'etc/grub.d'-folder."
-msgstr ""
+msgstr "S'ha produït un error preparant el directori 'etc/grub.d'."
 
 #: src/installation/process.py:923
 #, python-format
@@ -891,7 +891,7 @@ msgstr "Instal·lant el carregador d'arrencada GRUB(2) BIOS a %s"
 msgid ""
 "grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can"
 " continue."
-msgstr ""
+msgstr "Sembla que el grub-mkconfig s'ha penjat. S'està matant grub-mount i os-prober per poder continuar."
 
 #: src/installation/process.py:951
 msgid "GRUB(2) BIOS has been successfully installed."
@@ -933,7 +933,7 @@ msgstr "S'està generant el fitxer grub.cfg"
 
 #: src/installation/process.py:1039
 msgid "GRUB(2) UEFI has been successfully installed."
-msgstr ""
+msgstr "El GRUB(2) UEFI s'ha instal·lat correctament"
 
 #: src/installation/process.py:1042
 msgid "ERROR installing GRUB(2) UEFI."
@@ -945,7 +945,7 @@ msgstr "ERROR instal·lant la configuració local de GRUB(2)."
 
 #: src/installation/process.py:1091
 msgid "Can't freeze/unfreeze xfs system"
-msgstr ""
+msgstr "No es pot congelar/descongelar el sistema xfs"
 
 #: src/installation/process.py:1097
 #, python-format
@@ -1024,7 +1024,7 @@ msgstr "S'està configurant el maquinari..."
 
 #: src/installation/process.py:1511
 msgid "Installing drivers ..."
-msgstr ""
+msgstr "S'estan instal·lant els controladors..."
 
 #: src/installation/process.py:1518
 msgid "Can't execute the MHWD script"

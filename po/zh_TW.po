@@ -7,6 +7,7 @@
 # Dan McGee <dpmcgee@gmail.com>, 2011
 # freddy4212 <freddy4212@gmail.com>, 2013
 # Huei-Horng Yo <hiroshiyui@gmail.com>, 2012
+# 柏諺 黃 <s8321414@gmail.com>, 2014
 # lat1992 <lat9274@gmail.com>, 2014
 # manjarolinux <philm@manjaro.org>, 2013-2014
 # 柏諺 黃 <s8321414@gmail.com>, 2013-2014
@@ -15,8 +16,8 @@ msgstr ""
 "Project-Id-Version: manjaro-thus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-01 10:07+0200\n"
-"PO-Revision-Date: 2014-06-01 08:07+0000\n"
-"Last-Translator: manjarolinux <philm@manjaro.org>\n"
+"PO-Revision-Date: 2014-06-02 03:51+0000\n"
+"Last-Translator: 柏諺 黃 <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/manjaro-thus/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -846,7 +847,7 @@ msgstr "執行命令時遇到錯誤： %s"
 #: src/installation/process.py:683
 #, python-format
 msgid "Timeout running command: %s"
-msgstr ""
+msgstr "執行命令逾時： %s"
 
 #: src/installation/process.py:716
 msgid "Can't copy network configuration files"
@@ -873,7 +874,7 @@ msgstr "已加入 fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
 
 #: src/installation/process.py:915
 msgid "ERROR on preparing 'etc/grub.d'-folder."
-msgstr ""
+msgstr "準備 'etc/grub.d' 等資料夾時發生錯誤。"
 
 #: src/installation/process.py:923
 #, python-format
@@ -884,7 +885,7 @@ msgstr "正在安裝 GRUB(2) BIOS 開機載入器到 %s"
 msgid ""
 "grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can"
 " continue."
-msgstr ""
+msgstr "grub-mkconfig 似乎沒有反應。砍除 grub-mount 和 os-prober 可以讓我們繼續。"
 
 #: src/installation/process.py:951
 msgid "GRUB(2) BIOS has been successfully installed."
@@ -926,7 +927,7 @@ msgstr "正在生成 grub.cfg"
 
 #: src/installation/process.py:1039
 msgid "GRUB(2) UEFI has been successfully installed."
-msgstr ""
+msgstr "GRUB(2) UEFI 已成功安裝。"
 
 #: src/installation/process.py:1042
 msgid "ERROR installing GRUB(2) UEFI."
@@ -938,7 +939,7 @@ msgstr "安裝 GRUB(2) 的語系時遇到錯誤。"
 
 #: src/installation/process.py:1091
 msgid "Can't freeze/unfreeze xfs system"
-msgstr ""
+msgstr "無法凍結/解除凍結 xfs 系統"
 
 #: src/installation/process.py:1097
 #, python-format
@@ -1017,7 +1018,7 @@ msgstr "正在配置硬體 ..."
 
 #: src/installation/process.py:1511
 msgid "Installing drivers ..."
-msgstr ""
+msgstr "正在安裝驅動程式 ..."
 
 #: src/installation/process.py:1518
 msgid "Can't execute the MHWD script"
