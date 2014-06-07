@@ -8,26 +8,26 @@
 # Alex Talker <alextalker7@gmail.com>, 2013
 # Alex Talker <alextalker7@gmail.com>, 2013
 # Barigosha <artisho5@gmail.com>, 2013
-# cetjs2 <andrey0bolkonsky@gmail.com>, 2013
-# faidoc <faidoc@gmail.com>, 2013
+# Виктор Кукшиев <andrey0bolkonsky@gmail.com>, 2013
+# Alexandre Filgueira <faidoc@gmail.com>, 2013
 # Fox909 <ffox909@mail.ru>, 2014
 # Ivan Yurasov <vdk@gmx.us>, 2011
 # kyak <peselnik@gmail.com>, 2013
-# macbet <rostovslipknot@gmail.com>, 2013
+# Daniil <rostovslipknot@gmail.com>, 2013
 # Nickston <nickston@yandex.ru>, 2014
 # partizan <serg.partizan@gmail.com>, 2012-2013
-# Umidjon Almasov <u.almasov@gmail.com>, 2013
-# Umidjon Almasov <u.almasov@gmail.com>, 2013
-# Valentine Zgonnik <noisyislands@gmail.com>, 2013
+# Umid Almasov <u.almasov@gmail.com>, 2013
+# Umid Almasov <u.almasov@gmail.com>, 2013
+# Valentine <noisyislands@gmail.com>, 2013
 # VVS <vitaliy.star@gmail.com>, 2011
-# cetjs2 <andrey0bolkonsky@gmail.com>, 2013
+# Виктор Кукшиев <andrey0bolkonsky@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: manjaro-thus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-01 10:07+0200\n"
-"PO-Revision-Date: 2014-06-01 08:07+0000\n"
-"Last-Translator: manjarolinux <philm@manjaro.org>\n"
+"PO-Revision-Date: 2014-06-06 04:33+0000\n"
+"Last-Translator: Fox909 <ffox909@mail.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/manjaro-thus/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -857,7 +857,7 @@ msgstr "Ошибка выполнения команды: %s"
 #: src/installation/process.py:683
 #, python-format
 msgid "Timeout running command: %s"
-msgstr ""
+msgstr "Тайм-аут запуска команды: %s"
 
 #: src/installation/process.py:716
 msgid "Can't copy network configuration files"
@@ -884,7 +884,7 @@ msgstr "В fstab добавлен: tmpfs /tmp tmpfs defaults,noatime,mode=1777 0
 
 #: src/installation/process.py:915
 msgid "ERROR on preparing 'etc/grub.d'-folder."
-msgstr ""
+msgstr "ОШИБКА подготовки папки \"etc/grub.d\"."
 
 #: src/installation/process.py:923
 #, python-format
@@ -895,7 +895,7 @@ msgstr "Установка GRUB(2) BIOS загрузчика в %s"
 msgid ""
 "grub-mkconfig appears to be hung. Killing grub-mount and os-prober so we can"
 " continue."
-msgstr ""
+msgstr "grub-mkconfig, возможно, завис. Убейте grub-mount и os-prober, чтобы продолжить."
 
 #: src/installation/process.py:951
 msgid "GRUB(2) BIOS has been successfully installed."
@@ -937,7 +937,7 @@ msgstr "Генерация grub.cfg"
 
 #: src/installation/process.py:1039
 msgid "GRUB(2) UEFI has been successfully installed."
-msgstr ""
+msgstr "GRUB(2) UEFI был успешно установлен."
 
 #: src/installation/process.py:1042
 msgid "ERROR installing GRUB(2) UEFI."
@@ -949,7 +949,7 @@ msgstr "ОШИБКА при установке локали GRUB(2)."
 
 #: src/installation/process.py:1091
 msgid "Can't freeze/unfreeze xfs system"
-msgstr ""
+msgstr "Нельзя заморозить/разморозить xfs систему"
 
 #: src/installation/process.py:1097
 #, python-format
@@ -1028,7 +1028,7 @@ msgstr "Настройка оборудования ..."
 
 #: src/installation/process.py:1511
 msgid "Installing drivers ..."
-msgstr ""
+msgstr "Установка драйверов..."
 
 #: src/installation/process.py:1518
 msgid "Can't execute the MHWD script"
